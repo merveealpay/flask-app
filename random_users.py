@@ -10,8 +10,8 @@ class RandomUser(Resource):
     def get(self):
         response = requests.get('https://randomuser.me/api/')
         data = response.json()
-        email = data["results"][0]["email"]
-        return email
+        users = data["results"]
+        return users
 
 
 api.add_resource(RandomUser, '/users')

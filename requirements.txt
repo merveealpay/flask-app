@@ -12,7 +12,6 @@ Jinja2==3.0.3
 MarkupSafe==2.0.1
 Pygments==2.10.0
 pytz==2021.3
-pywars==4.0.3
 requests==2.26.0
 rich==10.9.0
 six==1.16.0

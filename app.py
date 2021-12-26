@@ -1,11 +1,11 @@
-from flask import Flask, request, jsonify
+from flask import Flask
 import requests
 from flask_restful import Resource, Api
 from flask_caching import Cache
 
 app = Flask(__name__)
 app.config.from_object('config.Config')
-cache = Cache(app)  # Initialize Cache
+cache = Cache(app)
 api = Api(app)
 
 
@@ -21,4 +21,4 @@ class ExchangeRates(Resource):
 
 api.add_resource(ExchangeRates, '/rates')
 
-app.run(port=5000, debug=True)
+app.run(port=5000, host="0.0.0.0", debug=True)

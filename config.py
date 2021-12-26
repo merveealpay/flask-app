@@ -10,3 +10,6 @@ class Config(object):
     CACHE_REDIS_DB = os.environ.get('CACHE_REDIS_DB')
     CACHE_REDIS_URL = os.environ.get('CACHE_REDIS_URL')
     CACHE_DEFAULT_TIMEOUT = os.environ.get('CACHE_DEFAULT_TIMEOUT')
+    POSTGRES_USER = os.environ.get('POSTGRES_USER')
+    POSTGRES_PASSWORD = os.environ.get('POSTGRES_PASSWORD')
+    POSTGRES_DB = os.environ.get('POSTGRES_DB')

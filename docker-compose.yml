@@ -13,3 +13,34 @@ services:
     container_name: redis-container
     ports:
       - "6379:6379"
+#  postgres:
+#    image: "postgres"
+#    ports:
+#      - 5432:5432
+#    env_file:
+#      - .env
+#    volumes:
+#      - database-data:/var/lib/postgresql/data/
+
+#  volumes:
+#    database-data:
+
+#  celery:
+#    build: ./app
+#    command: celery -A flask_app.celery worker --loglevel=info
+#    volumes:
+#      - ./app/:/usr/src/app/
+#    environment:
+#      - SOME_ENV_VAR: 1
+#    depends_on:
+#      - redis
+#
+#    celery-beat:
+#      build: ./app
+#      command: celery -A celeryconfig beat --loglevel=info
+#      volumes:
+#        - ./app/:/usr/src/app/
+#      environment:
+#        - DEBUG=1
+#      depends_on:
+#        - redis

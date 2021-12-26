@@ -1,5 +1,6 @@
 from flask import Flask
 import requests
+from flask_migrate import Migrate
 from flask_restful import Resource, Api
 from flask_caching import Cache
 from flask_sqlalchemy import SQLAlchemy
@@ -7,8 +8,9 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 app.config.from_object('config.Config')
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:merve123@localhost:5432/rates_api"
 db = SQLAlchemy(app)
+migrate = Migrate(app, db)
 cache = Cache(app)
 api = Api(app)
 

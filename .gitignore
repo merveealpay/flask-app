@@ -145,3 +145,4 @@ cython_debug/
 env
 .idea
 .env
+todos.txt
